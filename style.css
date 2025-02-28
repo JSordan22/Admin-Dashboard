@@ -25,7 +25,6 @@ body {
     font-family: 'Inter', sans-serif;
     display: grid;
     grid-template-columns: 400px 1fr;
-    grid-template-rows: 1fr 1fr;
 }
 
 .sidebar {
@@ -95,9 +94,18 @@ body {
     filter: invert(52%) sepia(30%) saturate(500%) hue-rotate(204deg) brightness(100%) contrast(93%);
 }
 
-.welcome {
+main {
     padding: 0 100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 5fr;
+    justify-items: center; 
+    align-items: center;
+}
+
+.welcome {
     grid-row-start: 1;
+    align-self: self-end;
+    width: 100%;
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -150,10 +158,9 @@ body {
 .searchbar {
     grid-row-start: 2;
     background-color: var(--bkg-1);
-    margin-left: 100px;
-    width: calc(100% - 200px);
-    height: 100px;
-    border-radius: 45px;
+    width: 100%;
+    height: 110px;
+    border-radius: 40px;
     display: flex;
     align-items: center;
 }
