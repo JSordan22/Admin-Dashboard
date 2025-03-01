@@ -1,2 +1,2 @@
 # Admin-Dashboard
-An mockup of a admin dashboard
+A mockup of an admin dashboard
