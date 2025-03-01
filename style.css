@@ -121,7 +121,7 @@ main {
 .welcome .greeting .pfp {
     background-color: var(--purple-2);
     height: 145px;
-    width: 145px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
 
@@ -146,6 +146,7 @@ main {
 
 .welcome .btn-group .btn,
 .title {
+    cursor: pointer;
     background-color: var(--purple-2);
     color: white;
     font-size: 1.5rem;
@@ -220,28 +221,28 @@ main {
 
 .main-content {
     width: 100%;
+    justify-self: self-start;
+    align-self: self-start;
     display: flex;
     justify-content: space-between;
 }
 
 .your-projects {
     width: 100%;
-    justify-self: self-start;
-    align-self: self-start;
 }
 
 .your-projects .projects {
-    margin-top: 20px;
+    margin: 20px 0 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 385px);
+    grid-template-columns: repeat(auto-fill, 420px);
     grid-template-rows: repeat(2, 300px);
     gap: 40px;
 }
 
 .projects .project {
     text-align: left;
-    padding: 28px;
-    width: 385px;
+    padding: 30px;
+    width: 420px;
     height: 300px;
     background-color: var(--bkg-1);
     border-left: 12px solid var(--purple-2);
@@ -261,7 +262,8 @@ main {
     font-weight: 400;
 }
 
-.projects .project-info p {
+.projects .project-info p,
+.aside .abc p {
     color: var(--text-2);
     width: 22ch;
     font-size: 18px;
@@ -277,3 +279,42 @@ main {
     cursor: pointer;
 }
 
+.aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aside .abc {
+    background-color: var(--bkg-1);
+    margin-bottom: 20px;
+    padding: 30px 0;
+    height: 355px;
+    width: 350px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.aside .abc .group {
+    margin: 0 30px;
+}
+
+.aside .abc h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.aside .abc p {
+    margin: 4px 0 10px;
+    font-size: 13px;
+    width: 32ch;
+}
+
+.aside .abc a {
+    font-size: 13px;
+    color: var(--purple-2);
+}
+
+.aside .abc hr {
+    margin: 16px 18px;
+}
